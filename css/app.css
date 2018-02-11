@@ -71,7 +71,7 @@ h2{
 }
 
 a.panel{
-	display: inline-block;
+	display: block;
 }
 
 .content{
