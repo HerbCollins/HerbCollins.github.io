@@ -6,10 +6,6 @@ categories: PHP
 tags: [php,MySQL]
 ---
 
-
-# Mysql按周，月，日分组统计数据
----
-
 - 使用函数：`DATE_FORMAT`
 - PHP版本要求：`(PHP 5 >= 5.2.0, PHP 7)`
 - 语法：`date_format(object,format)`
