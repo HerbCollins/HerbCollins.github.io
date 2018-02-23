@@ -150,6 +150,7 @@ a.panel{
 .article-li h2{
 	font-size: 24px;
 	color:#333;
+	font-weight: bold;
 }
 .article-li p{
 	color:#999;
