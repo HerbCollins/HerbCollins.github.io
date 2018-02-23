@@ -79,6 +79,15 @@ blockquote {
     font-weight: 600;
     line-height: 1.25;
 }
+.page h4{
+	font-size: 1.25em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eaecef;
+	margin-top: 24px;
+	margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
 .navbar{
 	list-style: none;
 	margin:0px;
