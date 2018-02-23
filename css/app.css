@@ -146,7 +146,8 @@ a.panel{
 
 .content{
 	width: 75%;
-    margin: 20px auto;
+	padding:10px 0px;
+    margin: 10px auto;
     height: auto;
     overflow: hidden;
 }
