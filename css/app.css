@@ -1,8 +1,7 @@
 body{
 	background: #ffffff;
 	font-family: "Microsoft YaHei UI Light";
-	font-size: 16px;
-
+	font-size: 14px;
 }
 
 a{
@@ -35,6 +34,9 @@ pre{
 	border:0px;
 }
 
+h1{
+	font-size: 2.25em;
+}
 h2{
 	margin:0px;
 	padding:10px 0px 20px 0px;
@@ -47,7 +49,36 @@ blockquote {
     border-left: 5px solid #eee;
     color:#6a737d;
 }
-
+.page {
+	tab-size: 4;
+	font-family: "-apple-system", BlinkMacSystemFont, "\5FAE\8F6F\96C5\9ED1", "PingFang SC", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", SimSun, "\5B8B\4F53", Heiti, "\9ED1\4F53", sans-serif;
+}
+.page h1{
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eaecef;
+	margin-bottom: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    line-height: 1.25;
+}
+.page h2{
+	font-size: 1.75em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eaecef;
+	margin-bottom: 16px;
+	margin-top: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+.page h3{
+	font-size: 1.5em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eaecef;
+	margin-top: 24px;
+	margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
 .navbar{
 	list-style: none;
 	margin:0px;
