@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "标签 | Tags"
+title: "标签"
 description: "哈哈，你找到了我的文章基因库"  
 ---
 
