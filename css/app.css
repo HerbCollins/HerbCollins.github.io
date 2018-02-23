@@ -132,13 +132,12 @@ blockquote {
 .panel{
 	border-radius: 0px;
 	box-shadow: none;
-	transition: box-shadow 0.6s;
+	transition: box-shadow 0.4s;
 	cursor: pointer;
-
 }
 
 .panel:hover{
-	box-shadow: 0px 0px 16px #f0f0f0;
+	box-shadow: 0px 0px 16px #c0c0c0;
 }
 
 a.panel{
