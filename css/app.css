@@ -202,6 +202,8 @@ li.listing-seperator{
 .side-nav>li.active>a, .side-nav>li.active>a:focus, .side-nav>li.active>a:hover , .side-nav>li>a:focus, .side-nav>li>a:hover{
 	color: #555;
     cursor: pointer;
+    border: 0px;
+    border-radius: 0px;
     background-color: #f2f2f2;
 }
 .nav-tabs{
