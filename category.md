@@ -14,13 +14,10 @@ description: "哈哈，你找到了我的文章基因库"
 </div>
 <div class="col-md-10 tab-content">
   	{% for tag in site.tags %}
-  		
 	  	<div role="tabpanel" class="tab-pane" id="{{ tag[0] }}">
-	  	
 			{% for post in tag[1] %}
-
 				<a href="{{ post.url  }}">
-						<h4><span class="label">{{ post.date | date: "%Y-%m-%d" }}</span>-{{ post.title }}</h4>
+						<h4><span>{{ post.date | date: "%Y-%m-%d" }}</span>-{{ post.title }}</h4>
 				</a>
 			{% endfor %}
 		</div>
