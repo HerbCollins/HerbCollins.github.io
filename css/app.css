@@ -202,16 +202,13 @@ li.listing-seperator{
 .side-nav>li.active>a, .side-nav>li.active>a:focus, .side-nav>li.active>a:hover , .side-nav>li>a:focus, .side-nav>li>a:hover{
 	color: #555;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #f2f2f2;
     border: 0px;
-    border-right:4px solid #f2f2f2;
     border-radius: 0px;
-    font-weight: bold;
 }
 .nav-tabs{
 	border:0px;
 }
 .nav-tabs>li>a{
 	font-weight: bold;
-    border-right:4px solid transparent;
 }
