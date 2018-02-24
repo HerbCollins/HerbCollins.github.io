@@ -203,11 +203,11 @@ li.listing-seperator{
 	color: #555;
     cursor: pointer;
     background-color: #f2f2f2;
-    border: 0px;
-    border-radius: 0px;
 }
 .nav-tabs{
 	border:0px;
 }
 .nav-tabs>li>a{
+    border: 0px;
+    border-radius: 0px;
 }
