@@ -204,7 +204,7 @@ li.listing-seperator{
     cursor: pointer;
     background-color: #fff;
     border: 0px;
-    border-color: #f2f2f2;
+    border-right:4px solid #f2f2f2;
     border-radius: 0px;
     font-weight: bold;
 }
