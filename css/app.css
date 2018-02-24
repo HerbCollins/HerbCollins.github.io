@@ -49,6 +49,9 @@ blockquote {
     border-left: 5px solid #eee;
     color:#6a737d;
 }
+.main{
+	padding-top:20px;
+}
 .page {
 	tab-size: 4;
 	font-family: "-apple-system", BlinkMacSystemFont, "\5FAE\8F6F\96C5\9ED1", "PingFang SC", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", SimSun, "\5B8B\4F53", Heiti, "\9ED1\4F53", sans-serif;
@@ -189,4 +192,19 @@ a.panel{
 li.listing-seperator{
 	padding-left:10px;
 	border-left:1px solid #999;
+}
+
+.side-nav>li{
+	float: none;
+	display: block;
+	width:100%;
+}
+.side-nav>li.active>a, .side-nav>li.active>a:focus, .side-nav>li.active>a:hover{
+	color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 0px;
+    border-left:2px solid #f2f2f2;
+    border-radius: 0px;
+    font-weight: bold;
 }

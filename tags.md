@@ -5,7 +5,7 @@ description: "哈哈，你找到了我的文章基因库"
 ---
 
 <div>
-	<ul class="nav nav-tabs" role="tablist">
+	<ul class="nav nav-tabs side-nav" role="tablist">
 		{% for tag in site.tags %}
 		
 		<li role="presentation"><a href="#{{ tag[0] }}" aria-controls="{{ tag[0] }}" role="tab" data-toggle="tab">{{ tag[0] }}</a></li>
