@@ -19,19 +19,8 @@ description: "哈哈，你找到了我的文章基因库"
 	  	
 			{% for post in tag[1] %}
 
-				<a href="{{ post.url  }}" class="panel article-li">
-					<div class="panel-body">
-						<h2>{{ post.title }} 
-							<small>
-								<i>{{ post.date | date: "%Y-%m-%d" }} By 
-								{% if post.author %}
-								{{ post.author }}
-								{% else %}
-									{{ site.title }}
-							{% endif %}
-							</i></small>
-						</h2>
-					</div>
+				<a href="{{ post.url  }}">
+						<h4><span class="label">{{ post.date | date: "%Y-%m-%d" }}</span>-{{ post.title }}</h4>
 				</a>
 			{% endfor %}
 		</div>
