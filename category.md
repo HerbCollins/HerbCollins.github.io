@@ -12,7 +12,7 @@ description: "哈哈，你找到了我的文章基因库"
 		{% endfor %}
 	</ul>
 </div>
-<div class="col-md-10">
+<div class="col-md-10 tab-content">
   	{% for tag in site.tags %}
   		
 	  	<div role="tabpanel" class="tab-pane" id="{{ tag[0] }}">
