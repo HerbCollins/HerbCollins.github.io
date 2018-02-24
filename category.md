@@ -5,9 +5,9 @@ description: "哈哈，你找到了我的文章基因库"
 ---
 <div class="col-md-2">
 	<ul class="nav nav-tabs" role="tablist">
-		{% for cate in site.category %}
+		{% for tag in site.tags %}
 		
-		<li role="presentation"><a href="#{{ cate[0] }}" aria-controls="{{ cate[0] }}" role="tab" data-toggle="tab">{{ cate[0] }}</a></li>
+		<li role="presentation"><a href="#{{ tag[0] }}" aria-controls="{{ tag[0] }}" role="tab" data-toggle="tab">{{ tag[0] }}</a></li>
 		
 		{% endfor %}
 	</ul>
