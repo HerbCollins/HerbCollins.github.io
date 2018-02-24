@@ -211,3 +211,7 @@ li.listing-seperator{
 .nav-tabs{
 	border:0px;
 }
+.nav-tabs>li>a{
+	font-weight: bold;
+	cursor: pointer;
+}
