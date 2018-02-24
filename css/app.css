@@ -199,12 +199,15 @@ li.listing-seperator{
 	display: block;
 	width:100%;
 }
-.side-nav>li.active>a, .side-nav>li.active>a:focus, .side-nav>li.active>a:hover{
+.side-nav>li.active>a, .side-nav>li.active>a:focus, .side-nav>li.active>a:hover , .side-nav>li>a:focus, .side-nav>li>a:hover{
 	color: #555;
     cursor: default;
     background-color: #fff;
     border: 0px;
-    border-left:2px solid #f2f2f2;
+    border-right:4px solid #f2f2f2;
     border-radius: 0px;
     font-weight: bold;
+}
+.nav-tabs{
+	border:0px;
 }
