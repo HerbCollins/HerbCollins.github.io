@@ -16,10 +16,13 @@ description: ""
 						</div>
 						<div class="panel-body">
 							{% for post in tag[1] %}
-							<a href="{{ post.url }}">
+							<p>
+								<a href="{{ post.url }}">
 								<h4 style="display: inline-block;">{{ post.title }}</h4>
-							</a>
-							<span class="text-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</span>
+								</a>
+								<span class="pull-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</span>
+							</p>
+							<hr>
 							{% endfor %}
 						</div>
 					</div>
