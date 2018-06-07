@@ -5,9 +5,9 @@ description: ""
 ---
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-md-8 tab-content">
+		<div class="col-xs-12 col-md-8">
 		  	{% for tag in site.tags %}
-			  	<div role="tabpanel" class="tab-pane" id="{{ tag[0] }}">
+			  	<div id="{{ tag[0] }}">
 					{% for post in tag[1] %}
 						<h4>
 							<a href="{{ post.url }}">
@@ -15,6 +15,7 @@ description: ""
 							</a>
 						</h4>
 						<p class="text-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</p>
+						<hr>
 					{% endfor %}
 				</div>
 			{% endfor %}
