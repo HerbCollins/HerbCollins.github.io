@@ -10,11 +10,11 @@ description: "Articles"
 		<div class="col-xs-12 col-md-8 col-lg-9">
 			<div class="panel">
 				<div class="panel-body">
-					{% for post in paginator.posts %}
+					{% for post in site.posts %}
 						<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
 						<p>{{ post.content }}</p>
 						<div class="article-attrs">
-							<span>
+							<span class="pull-left">
 								<i class="fa fa-fw fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}
 							</span>
 							<span><i class="fa fa-fw fa-tags"></i> 
