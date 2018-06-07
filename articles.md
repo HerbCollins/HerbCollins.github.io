@@ -12,7 +12,6 @@ description: "Articles"
 			<div class="panel">
 				<div class="panel-body">
 					<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-					<p>{{ post.excerpt }}</p>
 					<div class="article-attrs">
 						<span class="pull-left">
 							<i class="fa fa-fw fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}
@@ -23,6 +22,7 @@ description: "Articles"
 							{% endfor %}
 						</span>
 					</div>
+					<p>{{ post.excerpt }}</p>
 				</div>
 			</div>
 			{% endfor %}
