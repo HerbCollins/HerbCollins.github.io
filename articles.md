@@ -5,25 +5,24 @@ description: "Articles"
 ---
 
 
-<div class="container">
+<div class="container articles-page">
 	<div class="row">
 		<div class="col-xs-12 col-md-8 col-lg-9">
 			{% for post in site.posts %}
 			<div class="panel">
 				<div class="panel-body">
-					
-						<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
-						<p>{{ post.content }}</p>
-						<div class="article-attrs">
-							<span class="pull-left">
-								<i class="fa fa-fw fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}
-							</span>
-							<span><i class="fa fa-fw fa-tags"></i> 
-								{% for tag in post.tags %}
-									<span>{{ tag }}</span>
-								{% endfor %}
-							</span>
-						</div>
+					<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+					<p>{{ post.excerpt }}</p>
+					<div class="article-attrs">
+						<span class="pull-left">
+							<i class="fa fa-fw fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}
+						</span>
+						<span><i class="fa fa-fw fa-tags"></i> 
+							{% for tag in post.tags %}
+								<span>{{ tag }}</span>
+							{% endfor %}
+						</span>
+					</div>
 				</div>
 			</div>
 			{% endfor %}
