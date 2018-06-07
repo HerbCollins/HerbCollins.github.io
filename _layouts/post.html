@@ -1,50 +1,91 @@
 ---
 layout: new
 ---
-<div class="content">
-    <header class="intro-header" >
-    <div class="col-lg-12">
-        <div class="post-heading">
-            <div class="Tags">
-                {% for tag in page.tags %}
-                <a class="label label-primary" href="/tags/#{{ tag }}" title="{{ tag }}"><i class="fa fa-fw fa-circle-thin"></i> {{ tag }}</a>
-                {% endfor %}
-            </div>
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            <span class="meta">
-                <i>
-                    Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}
-                </i>
-            </span>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-lg-9">
+            <!-- Post Content -->
+            <article class="page">
+                <div class="col-lg-12">
+                    <h1>{{ page.title }}</h1>
+                    <div class="article-attrs text-left">
+                        <span>
+                            <i class="fa fa-fw fa-calendar"></i>
+                            {{ page.date | date: "%Y-%m-%d" }}
+                        </span>
+                        <span>
+                            {% for tag in page.tags %}
+                            <a class="label label-primary" href="/tags/#{{ tag }}" title="{{ tag }}"><i class="fa fa-fw fa-circle-thin"></i> {{ tag }}</a>
+                            {% endfor %}
+                        </span>
+                    </div>
+                    <hr>
+                    {{ content }}
+                    <hr>
+                    <ul class="pager">
+                        {% if page.previous.url %}
+                        <li class="previous">
+                            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                        </li>
+                        {% endif %}
+                        {% if page.next.url %}
+                        <li class="next">
+                            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </article>
         </div>
-        <hr>
+        <div class="col-xs-12 col-md-4 col-lg-3"></div>
     </div>
-</header>
-
-<!-- Post Content -->
-<article class="page">
-    <div class="col-lg-12">
-
-        {{ content }}
-
-        <hr>
-
-        <ul class="pager">
-            {% if page.previous.url %}
-            <li class="previous">
-                <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
-            </li>
-            {% endif %}
-            {% if page.next.url %}
-            <li class="next">
-                <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
-            </li>
-            {% endif %}
-        </ul>
-    </div>
+    
 </div>
-</article>
+
+<div class="container">
+    <header class="intro-header" >
+        <div class="col-lg-12">
+            <div class="post-heading">
+                <div class="Tags">
+                    {% for tag in page.tags %}
+                    <a class="label label-primary" href="/tags/#{{ tag }}" title="{{ tag }}"><i class="fa fa-fw fa-circle-thin"></i> {{ tag }}</a>
+                    {% endfor %}
+                </div>
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}
+                <h2 class="subheading">{{ page.subtitle }}</h2>
+                {% endif %}
+                <span class="meta">
+                    <i>
+                        Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}
+                    </i>
+                </span>
+            </div>
+            <hr>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article class="page">
+        <div class="col-lg-12">
+
+            {{ content }}
+
+            <hr>
+
+            <ul class="pager">
+                {% if page.previous.url %}
+                <li class="previous">
+                    <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                </li>
+                {% endif %}
+                {% if page.next.url %}
+                <li class="next">
+                    <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    </article>
 </div>
