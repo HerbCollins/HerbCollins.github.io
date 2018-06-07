@@ -1,32 +1,26 @@
 ---
 layout: default
-title: "标签"
-description: "哈哈，你找到了我的文章基因库"  
+title: "Tags"
+description: ""
 ---
-
-<div>
-	<ul class="nav nav-tabs" role="tablist">
+<div class="col-md-2">
+	<ul class="nav nav-tabs side-nav" role="tablist">
 		{% for tag in site.tags %}
 		
 		<li role="presentation"><a href="#{{ tag[0] }}" aria-controls="{{ tag[0] }}" role="tab" data-toggle="tab">{{ tag[0] }}</a></li>
 		
 		{% endfor %}
 	</ul>
-
-  <div class="tab-content">
+</div>
+<div class="col-md-10 tab-content">
   	{% for tag in site.tags %}
-  		
 	  	<div role="tabpanel" class="tab-pane" id="{{ tag[0] }}">
-	  	
 			{% for post in tag[1] %}
-			  <li class="listing-item">
-			  <span class="tag-time"><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time></span>
-			  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-			  </li>
+				<a href="{{ post.url  }}">
+						<h4><span>{{ post.date | date: "%Y-%m-%d" }}</span>-{{ post.title }}</h4>
+				</a>
 			{% endfor %}
 		</div>
 	{% endfor %}
-  </div>
-</div>
   
-
+</div>
