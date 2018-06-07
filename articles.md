@@ -8,9 +8,10 @@ description: "Articles"
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-md-8 col-lg-9">
+			{% for post in site.posts %}
 			<div class="panel">
 				<div class="panel-body">
-					{% for post in site.posts %}
+					
 						<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
 						<p>{{ post.content }}</p>
 						<div class="article-attrs">
@@ -23,10 +24,9 @@ description: "Articles"
 								{% endfor %}
 							</span>
 						</div>
-					{% endfor %}
 				</div>
 			</div>
-
+			{% endfor %}
 			<!-- Pager -->
 			{% if paginator.total_pages > 1 %}
 			<ul class="pager">
