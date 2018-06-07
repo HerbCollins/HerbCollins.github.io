@@ -26,7 +26,7 @@ description: "个人博客"
 				<div class="panel">
 					<div class="panel-body">
 						{% for key,post in paginator.posts %}
-							{% if key eq 0 %}
+							{% if key == 0 %}
 								<h1>{{ post.title }}</h1>
 								<p>{{ post.content | strip_html }}</p>
 								<div class="article-attrs">
