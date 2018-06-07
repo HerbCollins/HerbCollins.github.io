@@ -8,15 +8,21 @@ description: ""
 		<div class="col-xs-12 col-md-8">
 		  	{% for tag in site.tags %}
 			  	<div id="{{ tag[0] }}">
-					{% for post in tag[1] %}
-						<h4>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<span>
+								{{ tag[0] }} 
+							</span>
+						</div>
+						<div class="panel-body">
+							{% for post in tag[1] %}
 							<a href="{{ post.url }}">
-								{{ post.title }}
+								<h4 style="display: inline-block;">{{ post.title }}</h4>
 							</a>
-						</h4>
-						<p class="text-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</p>
-						<hr>
-					{% endfor %}
+							<span class="text-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</span>
+							{% endfor %}
+						</div>
+					</div>
 				</div>
 			{% endfor %}
 		</div>
@@ -25,7 +31,7 @@ description: ""
 				{% for tag in site.tags %}
 				  	<a href="#{{ tag[0] }}" class="list-group-item">
 				    	{{ tag[0] }} 
-				    	<span class="badge">{{ tag[1].size }}</span>
+				    	<span class="label label-info">{{ tag[1].size }}</span>
 				  	</a>
 			  	{% endfor %}
 			</div>
