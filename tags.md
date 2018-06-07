@@ -3,24 +3,32 @@ layout: new
 title: "Tags"
 description: ""
 ---
-<div class="col-md-2">
-	<ul class="nav nav-tabs side-nav" role="tablist">
-		{% for tag in site.tags %}
-		
-		<li role="presentation"><a href="#{{ tag[0] }}" aria-controls="{{ tag[0] }}" role="tab" data-toggle="tab">{{ tag[0] }}</a></li>
-		
-		{% endfor %}
-	</ul>
-</div>
-<div class="col-md-10 tab-content">
-  	{% for tag in site.tags %}
-	  	<div role="tabpanel" class="tab-pane" id="{{ tag[0] }}">
-			{% for post in tag[1] %}
-				<a href="{{ post.url  }}">
-						<h4><span>{{ post.date | date: "%Y-%m-%d" }}</span>-{{ post.title }}</h4>
-				</a>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-8 tab-content">
+		  	{% for tag in site.tags %}
+			  	<div role="tabpanel" class="tab-pane" id="{{ tag[0] }}">
+					{% for post in tag[1] %}
+						<h4>
+							<a href="{{ post.url }}">
+								{{ post.title }}
+							</a>
+						</h4>
+						<p class="text-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</p>
+					{% endfor %}
+				</div>
 			{% endfor %}
 		</div>
-	{% endfor %}
-  
+		<div class="col-md-4">
+			<div class="list-group">
+				{% for tag in site.tags %}
+				  	<a href="#{{ tag[0] }}" class="list-group-item">
+				    	{{ tag[0] }} 
+				    	<span class="badge">{{ tag[1].size }}</span>
+				  	</a>
+			  	{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
+

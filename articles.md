@@ -7,7 +7,7 @@ description: "Articles"
 
 <div class="container articles-page">
 	<div class="row">
-		<div class="col-xs-12 col-md-8 col-lg-9">
+		<div class="col-xs-12 col-md-12 col-lg-12">
 			{% for post in site.posts %}
 			<div class="panel">
 				<div class="panel-body">
@@ -41,9 +41,6 @@ description: "Articles"
 			    {% endif %}
 			</ul>
 			{% endif %}
-		</div>
-		<div class="col-xs-12 col-md-4 col-lg-3">
-			
 		</div>
 	</div>
 </div>
