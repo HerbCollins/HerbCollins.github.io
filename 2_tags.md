@@ -3,7 +3,7 @@ layout: new
 title: "Tags"
 description: ""
 ---
-<div class="container">
+<div class="container tags-page">
 	<div class="row">
 		<div class="col-xs-12 col-md-8">
 		  	{% for tag in site.tags %}
@@ -16,13 +16,13 @@ description: ""
 						</div>
 						<div class="panel-body">
 							{% for post in tag[1] %}
-							<p>
+							<div class="article-li">
 								<a href="{{ post.url }}">
-								<h4 style="display: inline-block;">{{ post.title }}</h4>
+								<span style="display: inline-block;">
+									{{ post.title }} -- {{ post.date | date: "%Y-%m-%d" }}
+								</span>
 								</a>
-								<span class="pull-right text-sm">-- {{ post.date | date: "%Y-%m-%d" }}</span>
-							</p>
-							<hr>
+							</div>
 							{% endfor %}
 						</div>
 					</div>
