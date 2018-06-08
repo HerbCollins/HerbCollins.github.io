@@ -28,6 +28,9 @@ description: "个人博客"
 						{% for post in paginator.posts limit:1 %}
 							<h1>{{ post.title }}</h1>
 							<p>{{ post.content }}</p>
+							<div class="text-right">
+    						<img src="http://static.wawmam.com/zhangmingliang.png" style="width:200px;">
+    						</div>
 							<div class="article-attrs">
 								<span class="pull-left">
 									<i class="fa fa-fw fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}
