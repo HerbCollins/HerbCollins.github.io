@@ -17,9 +17,9 @@ description: "Articles"
 							<i class="fa fa-fw fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}
 						</span>
 						<span><i class="fa fa-fw fa-tags"></i> 
-							{% for tag in page.tags %}
-                            <a href="/2_tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
-                            {% endfor %}
+							{% for tag in post.tags %}
+								<a href="/2_tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+							{% endfor %}
 						</span>
 					</div>
 					<p>{{ post.excerpt }}</p>
