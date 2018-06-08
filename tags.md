@@ -34,7 +34,7 @@ description: ""
 				{% for tag in site.tags %}
 				  	<a href="#{{ tag[0] }}" class="list-group-item">
 				    	{{ tag[0] }} 
-				    	<span class="label label-info">{{ tag[1].size }}</span>
+				    	<span class="label label-info pull-right">{{ tag[1].size }}</span>
 				  	</a>
 			  	{% endfor %}
 			</div>
