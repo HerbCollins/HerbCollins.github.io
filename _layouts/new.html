@@ -28,18 +28,12 @@
 	        	<li>
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
-                {% for node in site.pages %}
-                {% if node.title %}
-	                {% if page.url == node.url %}
-	                <li class="active">
-	                    <a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-	                </li>
-	                {% else %}
-	                <li>
-	                    <a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
-	                </li>
-	                {% endif %}
-	            {% endif %}
+                {% for page in site.pages %}
+                {% if page.title %}
+                <li>
+                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+                {% endif %}
                 {% endfor %}
 	      	</ul>
 	    </div><!-- /.navbar-collapse -->
